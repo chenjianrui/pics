@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import SearchBar from './SearchBar'
+import ImageList from './ImageList'
 
 class App extends Component {
   state = {
@@ -21,7 +22,7 @@ class App extends Component {
     return (
       <div className="ui container" style={{ marginTop: '10px' }}>
         <SearchBar handleSearchSubmit={this.handleSearchSubmit}/>
-        Found: {this.state.images.length} images
+        <ImageList images={this.state.images}/>
       </div>
     )
   }
